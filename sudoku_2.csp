@@ -1,0 +1,161 @@
+NAME: SUDOKU
+DESC: A 9x9 grid in which each row, col, and 3x3 grid contains unique numbers 1-9
+
+VARS:
+  # V = variable, the 1st # = row number, the 2nd # = column associated with the row.
+  # Row 1 possible tiles
+  V11: [6]
+  V12: [8]
+  V13: [1,2,3,4,5,6,7,8,9]
+  V14: [3]
+  V15: [5]
+  V16: [1,2,3,4,5,6,7,8,9]
+  V17: [9]
+  V18: [1,2,3,4,5,6,7,8,9]
+  V19: [7]
+  # Row 2 possible tiles
+  V21: [4]
+  V22: [1]
+  V23: [1,2,3,4,5,6,7,8,9]
+  V24: [1,2,3,4,5,6,7,8,9]
+  V25: [1,2,3,4,5,6,7,8,9]
+  V26: [7]
+  V27: [1,2,3,4,5,6,7,8,9]
+  V28: [5]
+  V29: [2]
+  # Row 3 possible tiles
+  V31: [7]
+  V32: [1,2,3,4,5,6,7,8,9]
+  V33: [1,2,3,4,5,6,7,8,9]
+  V34: [1,2,3,4,5,6,7,8,9]
+  V35: [1,2,3,4,5,6,7,8,9]
+  V36: [1,2,3,4,5,6,7,8,9]
+  V37: [8]
+  V38: [6]
+  V39: [4]
+  # Row 4 possible tiles
+  V41: [1,2,3,4,5,6,7,8,9]
+  V42: [1,2,3,4,5,6,7,8,9]
+  V43: [1,2,3,4,5,6,7,8,9]
+  V44: [2]
+  V45: [7]
+  V46: [5]
+  V47: [1,2,3,4,5,6,7,8,9]
+  V48: [8]
+  V49: [1,2,3,4,5,6,7,8,9]
+  # Row 5 possible tiles
+  V51: [1]
+  V52: [1,2,3,4,5,6,7,8,9]
+  V53: [1,2,3,4,5,6,7,8,9]
+  V54: [1,2,3,4,5,6,7,8,9]
+  V55: [1,2,3,4,5,6,7,8,9]
+  V56: [1,2,3,4,5,6,7,8,9]
+  V57: [1,2,3,4,5,6,7,8,9]
+  V58: [1,2,3,4,5,6,7,8,9]
+  V59: [9]
+  # Row 6 possible tiles
+  V61: [5]
+  V62: [1,2,3,4,5,6,7,8,9]
+  V63: [1,2,3,4,5,6,7,8,9]
+  V64: [1,2,3,4,5,6,7,8,9]
+  V65: [1]
+  V66: [1,2,3,4,5,6,7,8,9]
+  V67: [6]
+  V68: [1,2,3,4,5,6,7,8,9]
+  V69: [3]
+  # Row 7 possible tiles
+  V71: [1,2,3,4,5,6,7,8,9]
+  V72: [5]
+  V73: [1,2,3,4,5,6,7,8,9]
+  V74: [9]
+  V75: [1,2,3,4,5,6,7,8,9]
+  V76: [1,2,3,4,5,6,7,8,9]
+  V77: [1]
+  V78: [1,2,3,4,5,6,7,8,9]
+  V79: [1,2,3,4,5,6,7,8,9]
+  # Row 8 possible tiles
+  V81: [1,2,3,4,5,6,7,8,9]
+  V82: [6]
+  V83: [1]
+  V84: [7]
+  V85: [1,2,3,4,5,6,7,8,9]
+  V86: [1,2,3,4,5,6,7,8,9]
+  V87: [1,2,3,4,5,6,7,8,9]
+  V88: [1,2,3,4,5,6,7,8,9]
+  V89: [5]
+  # Row 9 possible tiles
+  V91: [1,2,3,4,5,6,7,8,9]
+  V92: [4]
+  V93: [3]
+  V94: [1,2,3,4,5,6,7,8,9]
+  V95: [1,2,3,4,5,6,7,8,9]
+  V96: [1]
+  V97: [7]
+  V98: [1,2,3,4,5,6,7,8,9]
+  V99: [1,2,3,4,5,6,7,8,9]
+
+CONS:
+  # Row contraints
+
+  # Row 1 constraint 
+  alldiff(V11,V12,V13,V14,V15,V16,V17,V18,V19)
+  # Row 2 constraint 
+  alldiff(V21,V22,V23,V24,V25,V26,V27,V28,V29)
+  # Row 3 constraint 
+  alldiff(V31,V32,V33,V34,V35,V36,V37,V38,V39)
+  # Row 4 constraint 
+  alldiff(V41,V42,V43,V44,V45,V46,V47,V48,V49)
+  # Row 5 constraint 
+  alldiff(V51,V52,V53,V54,V55,V56,V57,V58,V59)
+  # Row 6 constraint 
+  alldiff(V61,V62,V63,V64,V65,V66,V67,V68,V69)
+  # Row 7 constraint 
+  alldiff(V71,V72,V73,V74,V75,V76,V77,V78,V79)
+  # Row 8 constraint 
+  alldiff(V81,V82,V83,V84,V85,V86,V87,V88,V89)
+  # Row 9 constraint 
+  alldiff(V91,V92,V93,V94,V95,V96,V97,V98,V99)
+
+  # Column contraints
+
+  # Column 1 constraint 
+  alldiff(V11,V21,V31,V41,V51,V61,V71,V81,V91)
+  # Column 2 constraint 
+  alldiff(V12,V22,V32,V42,V52,V62,V72,V82,V92)
+  # Column 3 constraint 
+  alldiff(V13,V23,V33,V43,V53,V63,V73,V83,V93)
+  # Column 4 constraint 
+  alldiff(V14,V24,V34,V44,V54,V64,V74,V84,V94)
+  # Column 5 constraint 
+  alldiff(V15,V25,V35,V45,V55,V65,V75,V85,V95)
+  # Column 6 constraint 
+  alldiff(V16,V26,V36,V46,V56,V66,V76,V86,V96)
+  # Column 7 constraint 
+  alldiff(V17,V27,V37,V47,V57,V67,V77,V87,V97)
+  # Column 8 constraint 
+  alldiff(V18,V28,V38,V48,V58,V68,V78,V88,V98)
+  # Column 9 constraint 
+  alldiff(V19,V29,V39,V49,V59,V69,V79,V89,V99)
+
+  # 3x3 subgrid constraints
+
+  # Top-left grid
+  alldiff(V11,V12,V13,V21,V22,V23,V31,V32,V33)
+  # Top-middle grid
+  alldiff(V14,V15,V16,V24,V25,V26,V34,V35,V36)
+  # Top-right grid
+  alldiff(V17,V18,V19,V27,V28,V29,V37,V38,V39)
+  # Middle-left grid
+  alldiff(V41,V42,V43,V51,V52,V53,V61,V62,V63)
+  # Center grid
+  alldiff(V44,V45,V46,V54,V55,V56,V64,V65,V66)
+  # Middle-right grid
+  alldiff(V47,V48,V49,V57,V58,V59,V67,V68,V69)
+  # Bottom-left grid
+  alldiff(V71,V72,V73,V81,V82,V83,V91,V92,V93)
+  # Bottom-middle grid
+  alldiff(V74,V75,V76,V84,V85,V86,V94,V95,V96)
+  # Bottom-right grid
+  alldiff(V77,V78,V79,V87,V88,V89,V97,V98,V99)
+
+

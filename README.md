@@ -1,4 +1,4 @@
-# CS4300-CSP v1 — Tiny CSP Format + Starter Code
+# Constraint Satisfaction Problem
 
 My csp domain is Sudoku 9x9. I extended the solver with MRV (Minimum Remaining Values)
 
